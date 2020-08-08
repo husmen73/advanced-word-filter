@@ -1,0 +1,42 @@
+{
+  "name": "advanced-word-filter",
+  "version": "1.0.0",
+  "description": "A javascript advanced filter for bad words. Also supports similar bad words.",
+  "main": "./lib/advanced-word-filter",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "ver": "npx node-env-run --exec \"semantic-release --ci false\"",
+    "test": "mocha -R spec",
+    "commit": "git-cz",
+    "docs": "documentation readme --section API ./lib/advanced-word-filter.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/husmen73/advanced-word-filter.git"
+  },
+  "keywords": [
+    "advanced",
+    "word",
+    "filter",
+    "profane",
+    "similar"
+  ],
+  "author": "Huseyin INAN",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/husmen73/advanced-word-filter/issues"
+  },
+  "homepage": "https://github.com/husmen73/advanced-word-filter#readme",
+  "dependencies": {
+    "xregexp": "^4.3.0"
+  },
+  "devDependencies": {
+    "better-assert": "^1.0.2",
+    "cz-conventional-changelog": "^3.2.0",
+    "documentation": "^13.0.2",
+    "mocha": "^8.1.1"
+  }
+}
