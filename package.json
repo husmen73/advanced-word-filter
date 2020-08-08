@@ -24,6 +24,7 @@
     "profane",
     "similar"
   ],
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "author": "Huseyin INAN",
   "license": "MIT",
   "bugs": {
