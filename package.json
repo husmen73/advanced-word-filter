@@ -1,6 +1,6 @@
 {
   "name": "@husmen73/advanced-word-filter",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A javascript advanced filter for bad words. Also supports similar bad words.",
   "main": "./lib/advanced-word-filter",
   "directories": {
@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/husmen73/advanced-word-filter#readme",
   "dependencies": {
+    "string-similarity": "^4.0.2",
     "xregexp": "^4.3.0"
   },
   "devDependencies": {

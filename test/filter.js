@@ -5,6 +5,30 @@ const Filter = require('../lib/advanced-word-filter.js'),
 
 describe('filter', function(){
 	describe('clean',function(){
+		it('(Latin-ext) Should replace similarity a bad word (not similar 60%)',function(){
+			let customFilter = new Filter({emptyList: true, similarityPercent: 0.6});
+			customFilter.addWords("usu");
+			assert(customFilter.clean('musunuz') !== '*******');
+		});
+
+		it('(Latin-ext) Should replace similarity a bad word (******) (similar 50%)',function(){
+			let customFilter = new Filter({emptyList: true, similarityPercent: 0.5});
+			customFilter.addWords("usu");
+			assert(customFilter.clean('musunuz') === '*******');
+		});
+
+		it('(Latin-ext) Should replace similarity a bad word (******) (similar 75%)',function(){
+			let customFilter = new Filter({emptyList: true, similarityPercent: 0.75});
+			customFilter.addWords("fuck");
+			assert(customFilter.clean('fucker') === '******');
+		});
+
+		it('(Latin-ext) Should replace similarity a bad word (******) (similar 80%)',function(){
+			let customFilter = new Filter({emptyList: true, similarityPercent: 0.80});
+			customFilter.addWords("fuck");
+			assert(customFilter.clean('fucker') !== '******');
+		});
+
 		it('(Latin-ext) Should replace a bad word within a sentence asterisks (******)',function(){
 			let customFilter = new Filter({emptyList: true});
 			customFilter.addWords('İstanbulda', 'Türkçe', "ürdün",  "MUSUN");
