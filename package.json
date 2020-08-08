@@ -1,6 +1,6 @@
 {
   "name": "@husmen73/advanced-word-filter",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A javascript advanced filter for bad words. Also supports similar bad words.",
   "main": "./lib/advanced-word-filter",
   "directories": {
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/husmen73/advanced-word-filter.git"
+    "url": "git://github.com/husmen73/advanced-word-filter.git"
   },
   "keywords": [
     "advanced",
@@ -24,9 +24,6 @@
     "profane",
     "similar"
   ],
-  "publishConfig": {
-    "registry":"https://npm.pkg.github.com/husmen73"
-  },
   "author": "Huseyin INAN",
   "license": "MIT",
   "bugs": {
